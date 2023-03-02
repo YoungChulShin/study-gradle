@@ -25,7 +25,7 @@ test {
     description 'Runs unit tests.'
 
     filter {
-        excludeTestsMatching '**IntegrationTest'
+        excludeTestsMatching '*IntegrationTest'
     }
 }
 
@@ -34,7 +34,7 @@ task integrationTest(type: Test) {
     group 'verification'
 
     filter {
-        includeTestsMatching '**IntegrationTest'
+        includeTestsMatching '*IntegrationTest'
     }
     useJUnitPlatform()
 }

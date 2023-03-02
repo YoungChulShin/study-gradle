@@ -12,7 +12,7 @@ public class HelloServiceIntegrationTest {
   private HelloService sut;
 
   @Test
-  public void greetingIntegrationTest() {
+  public void greetingIntegration() {
     var result = sut.greeting();
 
     Assertions.assertThat(result).isEqualTo("hello");

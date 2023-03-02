@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class HelloServiceTest {
 
   @Test
-  void greetingTest() {
+  void greeting() {
     var sut = new HelloService();
     var result = sut.greeting();
 
