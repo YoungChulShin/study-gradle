@@ -5,14 +5,13 @@ import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
-@SpringBootTest
-class HelloServiceIntegrationTest {
+class HelloServiceIntegrationTest : IntegrationTest() {
 
     @Autowired
     private lateinit var sut: HelloService
 
     @Test
-    fun greetingIntegrationTest() {
+    fun greetingIntegration() {
         val result = sut.greeting()
 
         Assertions.assertThat(result).isEqualTo("hello")

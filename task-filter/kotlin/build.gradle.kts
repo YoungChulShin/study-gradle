@@ -30,5 +30,25 @@ tasks.withType<KotlinCompile> {
 }
 
 tasks.withType<Test> {
+    description = "Runs unit tests."
+
+    useJUnitPlatform {
+        excludeTags("IntegrationTest")
+    }
+}
+
+tasks.register<Test>("integrationTest") {
+    description = "Runs integration tests."
+    group = "verification"
+
+    useJUnitPlatform {
+        includeTags("IntegrationTest")
+    }
+}
+
+tasks.register<Test>("allTest") {
+    description = "Runs all tests. (unit tests + integration tests)."
+    group = "verification"
+
     useJUnitPlatform()
 }

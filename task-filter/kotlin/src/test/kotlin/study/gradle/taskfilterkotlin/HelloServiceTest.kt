@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test
 internal class HelloServiceTest {
 
     @Test
-    fun greetingTest() {
+    fun greeting() {
         val sut = HelloService()
 
         val result = sut.greeting()
