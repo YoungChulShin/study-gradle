@@ -20,3 +20,28 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+test {
+    description 'Runs unit tests.'
+
+    filter {
+        excludeTestsMatching '**IntegrationTest'
+    }
+}
+
+task integrationTest(type: Test) {
+    description 'Runs integration tests.'
+    group 'verification'
+
+    filter {
+        includeTestsMatching '**IntegrationTest'
+    }
+    useJUnitPlatform()
+}
+
+task allTest(type: Test) {
+    description 'Runs all tests. (unit tests + integration tests).'
+    group 'verification'
+
+    useJUnitPlatform()
+}
