@@ -1,1 +1,2 @@
-# study-gradle
+# 저장소 설명
+gradle 관려 스터디 저장소
