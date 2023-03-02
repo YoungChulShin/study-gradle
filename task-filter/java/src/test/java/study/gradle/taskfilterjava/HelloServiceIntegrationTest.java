@@ -3,10 +3,8 @@ package study.gradle.taskfilterjava;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-public class HelloServiceIntegrationTest {
+public class HelloServiceIntegrationTest extends IntegrationTest{
 
   @Autowired
   private HelloService sut;

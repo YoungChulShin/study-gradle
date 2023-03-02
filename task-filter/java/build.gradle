@@ -29,6 +29,15 @@ test {
     }
 }
 
+task testWithTag(type: Test) {
+    description 'Runs unit tests using category'
+    group 'verification'
+
+    useJUnitPlatform {
+        excludeTags("IntegrationTest")
+    }
+}
+
 task integrationTest(type: Test) {
     description 'Runs integration tests.'
     group 'verification'
@@ -38,6 +47,16 @@ task integrationTest(type: Test) {
     }
     useJUnitPlatform()
 }
+
+task integrationTestWithTag(type: Test) {
+    description 'Runs integration tests.'
+    group 'verification'
+
+    useJUnitPlatform {
+        includeTags("IntegrationTest")
+    }
+}
+
 
 task allTest(type: Test) {
     description 'Runs all tests. (unit tests + integration tests).'
