@@ -1,6 +1,12 @@
 # 저장소 설명
 gradle 관려 스터디 저장소 
 
+# 샘플 코드
+|name|description|
+|----|-----------|
+|[gradle-init](/gradle-init/)|gradle init 명령어를 이용한 초기화 샘플|
+|[task-filter](/task-filter/)|test code에서 filter/group 기능을 이용한 테스트 분리 샘플|
+
 # 개념
 특징
 - opensource [build automation](https://en.wikipedia.org/wiki/Build_automation) tool
