@@ -6,10 +6,15 @@
  * User Manual available at https://docs.gradle.org/8.0.1/userguide/building_java_projects.html
  */
 
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     id 'application'
 }
+
+version = "1.0.0"
+def myAge = 30
+String myName = 'TestName'
 
 repositories {
     // Use Maven Central for resolving dependencies.
@@ -32,4 +37,9 @@ application {
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+task printMessage() {
+    println("age: ${myAge}")
+    println("name: ${myName}")
 }
